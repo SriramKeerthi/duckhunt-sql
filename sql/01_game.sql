@@ -7,19 +7,19 @@ BEGIN
     IF (current_setting('game.id', true) IS NULL OR current_setting('game.id', true) = '0') THEN
         RAISE NOTICE '🦆 Starting a new game 🦆';
 
-        PERFORM set_config('game.template', '                               x
-                               1
-                               2
-                               3
-                               4
-                               5
- ===#                          6
- # ===                         7
-  #***                         8
-#==+##+==                      9
- ## *=+#                       a
-  ###                          b
-  ##                   #==     c
+        PERFORM set_config('game.template', '                                
+                                
+                                
+                                
+                                
+                                
+ ===#                           
+ # ===                          
+  #***                          
+#==+##+==                       
+ ## *=+#                        
+  ###                           
+  ##                   #==      
 =-==##++* *====** *=====##*##**#
 +=======+=======================
 +=======+=======================', false);
