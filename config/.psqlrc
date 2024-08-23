@@ -1,0 +1,17 @@
+\set QUIET on
+\pset format unaligned
+\echo =============================
+\echo = Welcome to Duck Hunt SQL! =
+\echo =============================
+\echo
+\echo 1. Start a game using "select start();"
+\echo 2. Shoot with "select shoot(x,y);" where x and y are in a 16x16 grid, 1 indexed.
+\echo 3. Stop a game using "select stop();"
+\echo 4. Quit with "exit"
+\echo
+\echo Enjoy!
+\pset format aligned
+\set PROMPT1 'DUCKHUNT> '
+\set PROMPT2 ''
+\set SHOW_CONTEXT never
+set game.id=0;
