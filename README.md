@@ -2,6 +2,8 @@
 
 ## Gameplay
 
+![Gameplay](./assets/screenshot.png)
+
 1. Install the game by running `./play.sh`.
 2. Start a new game by running `select start()`. Optionally, `select start(2)` to start at a higher level.
 3. Stop the game by running `select stop()` and exit by running `exit`.
@@ -13,4 +15,6 @@
 
 ## Pre-requisites
 
-Docker
+1. Docker
+2. Basic Math skills
+3. Zen
