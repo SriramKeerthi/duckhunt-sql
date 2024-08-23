@@ -1,5 +1,5 @@
 /**
- * This is a bad idea
+ * This is a bad idea :)
  */
 
 CREATE DATABASE duckhunt;
@@ -8,10 +8,8 @@ USE duckhunt;
 CREATE TABLE duckhunt (
     id           INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     game_level   INT NOT NULL,
-    game         JSONB NOT NULL,
     shots_fired  INT NOT NULL,
-    shots_hit    INT NOT NULL,
-    ducks        INT[] NOT NULL,
+    ducks        TEXT[] NOT NULL,
     
     created_at   TIMESTAMPTZ NOT NULL DEFAULT now(),
     updated_at   TIMESTAMPTZ NOT NULL DEFAULT now()

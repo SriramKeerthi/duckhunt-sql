@@ -1,8 +1,8 @@
 \set QUIET on
-\pset format unaligned
-\echo =============================
-\echo = Welcome to Duck Hunt SQL! =
-\echo =============================
+-- \pset format unaligned
+\echo ================================
+\echo = Welcome to Duck Hunt in SQL! =
+\echo ================================
 \echo
 \echo 1. Start a game using "select start();"
 \echo 2. Shoot with "select shoot(x,y);" where x and y are in a 16x16 grid, 1 indexed.
