@@ -1,5 +1,5 @@
 \set QUIET on
--- \pset format unaligned
+\pset format unaligned
 \echo ================================
 \echo = Welcome to Duck Hunt in SQL! =
 \echo ================================

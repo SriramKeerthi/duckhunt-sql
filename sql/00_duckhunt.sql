@@ -3,7 +3,7 @@
  */
 
 CREATE DATABASE duckhunt;
-USE duckhunt;
+\c duckhunt
 
 CREATE TABLE duckhunt (
     id           INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,

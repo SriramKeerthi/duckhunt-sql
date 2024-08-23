@@ -1,4 +1,4 @@
-/* A function which creates a new row in the duckhunt table */
+\c duckhunt
 
 CREATE OR REPLACE FUNCTION start(game_level INTEGER DEFAULT 1) RETURNS VOID AS $$
 DECLARE
@@ -235,7 +235,7 @@ BEGIN
         INTO outcome;
         RAISE DEBUG 'outcome: %', outcome;
 
-        UPDATE duckhunt SET ducks = array_cat(ducks, CASE WHEN outcome = 1 THEN ARRAY['🦆'] WHEN outcome = 2 THEN ARRAY['🫥 '] ELSE ARRAY[]::TEXT[] END) WHERE id = current_setting('game.id', true)::INT;
+        UPDATE duckhunt SET ducks = array_cat(ducks, CASE WHEN outcome = 1 THEN ARRAY['🦆'] WHEN outcome = 2 THEN ARRAY['🫥 '] ELSE ARRAY[]::TEXT[] END), shots_fired = shots_fired + 1 WHERE id = current_setting('game.id', true)::INT;
         
         outcome := CASE
             WHEN (SELECT array_length(ducks, 1) FROM duckhunt WHERE id = current_setting('game.id', true)::INT) >= 10 THEN 3
